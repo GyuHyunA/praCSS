@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#4ba9e9, #4ba9e9 50%, #fff 50%, #fff 100%);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background-color: black;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+.card:hover{
+  width: 600px;
+}
+
+.card .imgbox {
+  position: relative;
+  min-width: 300px;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card .imgbox img {
+  max-width: 250px;
+  transition: 0.5s ease-in-out;
+  transform: scaleX(-1);
+}
+
+.card:hover .imgbox img {
+  transform: scaleX(-1) rotate(35deg);
+}
+
+.card .detail {
+  position: absolute;
+  left: 0;
+  min-width: 300px;
+  height: 100%;
+  background: #4ba9e9;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 20px;
+  transition: .5s ease-in-out ;
+}
+
+.card:hover .detail{
+  left: 300px;
+}
+
+.card .detail::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+}
+
+.card .detail h3 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+.card .detail h3 span {
+  font-size: 0.65em;
+  font-weight: 400;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+.card .detail h4 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1em;
+}
+
+.card .detail p {
+  color: white;
+  opacity: 0.85;
+  font-size: 0.8em;
+}
+
+.card .detail .size {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.card .detail .size li {
+  color: white;
+  font-size: 0.9em;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.card .detail .size li:hover{
+  color: #4ba9e9;
+  background-color: white;
+  opacity: 1;
+}
+
+.group{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.group h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.group h2 sup{
+  font-weight: 300;
+}
+
+.group h2 small{
+  font-size: 0.75em;
+}
+
+.group a{
+  display: inline-flex;
+  padding: 10px 20px;
+  background: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #4ba9e9;
+}
